@@ -1,0 +1,15 @@
+{
+  "current_itinerary": {
+    "title": "测试行程",
+    "locations": [
+      {
+        "name": "地点1",
+        "lat": 37.0,
+        "lng": 121.0,
+        "time": "上午",
+        "description": "测试"
+      }
+    ]
+  },
+  "conversation_history": []
+}
