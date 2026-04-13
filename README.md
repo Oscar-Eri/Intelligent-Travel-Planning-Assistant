@@ -190,41 +190,17 @@ npm run preview
 
 ## 🚀 后端部署与运行
 
-### 方式一：使用启动脚本（推荐）
-```bash
-cd backend
-启动服务-多智能体版.bat  # Windows
-```
-
-### 方式二：手动启动
+### 方式一：手动启动
 ```bash
 cd backend
 python main.py
 ```
 
-### 方式三：使用 Uvicorn 命令行
+### 方式二：使用 Uvicorn 命令行
 ```bash
 cd backend
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
-
-### 验证服务
-- **健康检查**：`http://localhost:8000/health`
-- **智能体状态**：`http://localhost:8000/agents/status`
-- **API 文档**：`http://localhost:8000/docs`（Swagger UI）
-
-### 主要 API 接口
-
-| 方法 | 路径 | 说明 |
-|------|------|------|
-| POST | `/api/chat` | 聊天接口（核心） |
-| GET | `/api/itinerary` | 获取当前行程 |
-| DELETE | `/api/itinerary` | 清除当前行程 |
-| GET | `/health` | 健康检查 |
-| GET | `/agents/status` | 智能体状态监控 |
-
-
-
 ---
 
 ## 🔮 未来演进方向
@@ -246,38 +222,6 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 - [ ] 微服务拆分（独立部署各智能体）
 - [ ] 支持插件市场（第三方智能体接入）
 - [ ] 多语言国际化支持
-
----
-
-## 📄 许可证
-
-MIT License
-
----
-
-## 🤝 贡献指南
-
-欢迎提交 Issue 和 Pull Request！
-
-### 开发流程
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
-
-### 代码规范
-- Python：遵循 PEP 8，使用 Black 格式化
-- TypeScript：遵循 ESLint + Prettier 配置
-- 提交信息：使用 Conventional Commits 规范
-
----
-
-## 📞 技术支持
-
-- **架构问题**：查阅 `docs/MULTI_AGENT_ARCHITECTURE.md`
-- **API 使用**：访问 `http://localhost:8000/docs` 查看 Swagger 文档
-- **Bug 反馈**：提交 GitHub Issue，附上复现步骤和日志
 
 ---
 
